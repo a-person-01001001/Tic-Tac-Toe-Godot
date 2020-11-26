@@ -2,8 +2,6 @@ extends Node2D
 
 
 # VARIABLES
-var xTexture = $spriteX.texture.get_data()
-var oTexture = $spriteO.texture.get_data()
 var x_locations = [] # Fill with Vector2s of coordinates
 var o_locations = [] # Fill with Vector2s of coordinates
 var isXTurn = true
@@ -88,15 +86,16 @@ func getSquare(pos):
 
 
 func _input(event):
+
 	if event is InputEventMouseButton:
 		print("I got here")
 		setSquare(event)
 		print("before for")
 		for item in x_locations:
-			draw_texture(xTexture, item)
+			draw_texture($spriteX.texture.get_data(), item)
 		print("after x for")
 		for item in o_locations:
-			draw_texture(oTexture, item)
+			draw_texture($spriteO.texture.get_data(), item)
 		print("after o for")
 
 
@@ -104,3 +103,6 @@ func _input(event):
 #	var point = PoolVector2Array([Vector2(512, 0), Vector2(512, 600)])
 #	var color = PoolColorArray([Color(0, 0, 0)])
 #	draw_primitive(point, color, PoolVector2Array(), null, 50)
+
+#var xTexture = $spriteX.texture.get_data()
+#var oTexture = $spriteO.texture.get_data()
