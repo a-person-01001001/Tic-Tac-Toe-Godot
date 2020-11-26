@@ -1,0 +1,7 @@
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/obj/Debug/Tic Tac Toe.csprojAssemblyReference.cache
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/obj/Debug/Tic Tac Toe.AssemblyInfoInputs.cache
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/obj/Debug/Tic Tac Toe.AssemblyInfo.cs
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/bin/Debug/Tic Tac Toe.dll
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/bin/Debug/Tic Tac Toe.pdb
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/obj/Debug/Tic Tac Toe.dll
+/Users/mohammadhoque/Desktop/dev/code/Godot/Tic Tac Toe/.mono/temp/obj/Debug/Tic Tac Toe.pdb
