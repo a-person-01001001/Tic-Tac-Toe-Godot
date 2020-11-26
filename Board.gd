@@ -36,7 +36,7 @@ func setSquare(event):
 			print(event.as_text(), event.pressed)
 			var square = getSquare(event.position)
 			if checkIfTaken(square, o_locations, isXTurn):
-				x_locations.append(square)
+				x_locations.insert(-1, square)
 
 	elif not isXTurn:
 		if event.button_index == BUTTON_LEFT and event.pressed: # Check if the Left Mouse Button was pressed
@@ -64,6 +64,7 @@ func getSquare(pos):
 			return Vector2(512, 180)
 
 		elif pos.y >= 240 and pos.y <= 360:
+			print("1,1")
 			return Vector2(512, 300)
 
 		else:
@@ -93,10 +94,14 @@ func _input(event):
 		print("before for")
 		for item in x_locations:
 			draw_texture($spriteX.texture.get_data(), item)
+			update()
 		print("after x for")
 		for item in o_locations:
 			draw_texture($spriteO.texture.get_data(), item)
+			update()
 		print("after o for")
+
+
 
 
 #func _draw(): # DEBUG
