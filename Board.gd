@@ -17,6 +17,7 @@ func _ready():
 	draw_board()
 
 
+
 func checkIfTaken(x, o, xTurn):
 	if xTurn: # If it is X's turn
 		for oloc in o: # Cycle through all of o's pieces
@@ -26,8 +27,8 @@ func checkIfTaken(x, o, xTurn):
 		for xloc in x: # Cycle through all of X's pieces
 			if xloc in o: # And if one piece matches the square the player clicked
 				return false # Don't place it
-	else: # If it is a valid square
-		return true
+	# If it is a valid square
+	return true
 
 
 func setSquare(event):
@@ -36,7 +37,7 @@ func setSquare(event):
 			print(event.as_text(), event.pressed)
 			var square = getSquare(event.position)
 			if checkIfTaken(square, o_locations, isXTurn):
-				x_locations.insert(-1, square)
+				x_locations.append(square)
 
 	elif not isXTurn:
 		if event.button_index == BUTTON_LEFT and event.pressed: # Check if the Left Mouse Button was pressed
@@ -91,15 +92,17 @@ func _input(event):
 	if event is InputEventMouseButton:
 		print("I got here")
 		setSquare(event)
-		print("before for")
-		for item in x_locations:
-			draw_texture($spriteX.texture.get_data(), item)
-			update()
-		print("after x for")
-		for item in o_locations:
-			draw_texture($spriteO.texture.get_data(), item)
-			update()
-		print("after o for")
+		update()
+
+
+func _draw():
+	print("before for")
+	for pos in x_locations:
+		draw_texture($spriteX.texture, pos)
+	print("after x for")
+	for pos in o_locations:
+		draw_texture($spriteO.texture, pos)
+	print("after o for")
 
 
 
