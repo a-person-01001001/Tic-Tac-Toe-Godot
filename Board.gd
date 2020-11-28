@@ -50,59 +50,62 @@ func getSquare(pos):
 	if pos.x >= 332 and pos.x <= 452: # 0, x
 
 		if pos.y >= 120 and pos.y <= 240:
-			return Vector2(392, 180)
+			return Vector2(305, 100)
 
 		elif pos.y >= 240 and pos.y <= 360:
-			return Vector2(392, 300)
+			return Vector2(305, 220)
 
-		else:
-			return Vector2(392, 420)
+		elif pos.y >= 360 and pos.y <= 480:
+			return Vector2(305, 340)
 
+# :musical_note::notes::joy:(Yeah:thumbsup: , aye):joy: It's:point_right:the:salt:thirst:droplet::cold_sweat:, thirstiest:hot_face::sweat_drops:time:alarm_clock:, of:cup_with_straw:the:warning:year:calendar_spiral:. (Aye:rofl:, yuh:ok_hand_tone4:):eyes:I:eye:have:flushed:just:point_up_tone4:one:one:query:question:(:flushed:What's:question:that?:thinking:)Wanna:man_raising_hand_tone4:Sprite:cup_with_straw::sunglasses:Cranberry:cherries::sweat_drops:?(:smirk:Uh:eyes:huh:smirk:)The:weary:answer :drooling_face:is :tumbler_glass:clear..:yum::wink:It's:point_right:the:hot_face::flushed:thirst,:shushing_face::face_with_hand_over_mouth:thirstiest:sweat_drops::sweat_drops::100:time:alarm_clock:, of:cup_with_straw:the:cherries:year.:date:(:cup_with_straw:Sprite:cherries:,let's:cherries::cherries::100:go:man_running_tone4:):notes::musical_note:
 
 	elif pos.x >= 452 and pos.x <= 572: # 1, x
 
 		if pos.y >= 120 and pos.y <= 240:
-			return Vector2(512, 180)
+			return Vector2(430, 100)
 
 		elif pos.y >= 240 and pos.y <= 360:
-			print("1,1")
-			return Vector2(512, 300)
+			return Vector2(430, 220)
 
 		else:
-			return Vector2(512, 420)
+			return Vector2(430, 340)
 
 
 	elif pos.x >= 572 and pos.x <= 692: # 2, x
 
 		if pos.y >= 120 and pos.y <= 240:
-			return Vector2(632, 180)
+			return Vector2(550, 100)
 
 		elif pos.y >= 240 and pos.y <= 360:
-			return Vector2(632, 300)
+			return Vector2(550, 220)
 
 		else:
-			return Vector2(632, 420)
+			return Vector2(550, 340)
 
 	else:
-		pass
-
+		return Vector2(0, 0)
 
 func _input(event):
 
 	if event is InputEventMouseButton:
 		print("I got here")
-		setSquare(event)
-		update()
+		var loc = getSquare(event.position)
+		if loc == Vector2(0, 0):
+			pass
+		else:
+			setSquare(event)
+			update()
 
 
 func _draw():
-	print("before for")
+
 	for pos in x_locations:
 		draw_texture($spriteX.texture, pos)
-	print("after x for")
+
 	for pos in o_locations:
 		draw_texture($spriteO.texture, pos)
-	print("after o for")
+
 
 
 

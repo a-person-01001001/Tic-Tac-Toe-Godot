@@ -9,6 +9,7 @@ I have quite a few things to do before this is finished.
 
 - [x] Get the board rendered in the correct position
 - [x] Get letters to render
-- [ ] Render the letters in the correct place
+- [x] Render the letters in the correct place
+- [x] Remove `Nil` exception when clicked outside of the grid
 - [ ] Switch turns every time the letter is placed
 - [ ] Check the gamestate for if someone won

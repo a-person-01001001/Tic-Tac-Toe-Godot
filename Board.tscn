@@ -11,9 +11,10 @@ script = ExtResource( 3 )
 [node name="board" type="Sprite" parent="."]
 position = Vector2( 531.104, 282.089 )
 texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 360, 360 )
 
 [node name="spriteX" type="Sprite" parent="."]
-position = Vector2( -175.964, -118.606 )
+position = Vector2( -175.257, -112.949 )
 texture = ExtResource( 1 )
 
 [node name="spriteO" type="Sprite" parent="."]
