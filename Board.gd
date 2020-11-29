@@ -4,7 +4,7 @@ extends Node2D
 # VARIABLES
 var x_locations = [] # Fill with Vector2s of coordinates
 var o_locations = [] # Fill with Vector2s of coordinates
-var isXTurn = false
+var isXTurn = true
 
 
 func draw_board():
