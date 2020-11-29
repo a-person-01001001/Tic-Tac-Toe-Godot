@@ -13,3 +13,6 @@ I have quite a few things to do before this is finished.
 - [x] Remove `Nil` exception when clicked outside of the grid
 - [x] Switch turns every time the letter is placed
 - [ ] Check the gamestate for if someone won
+- [ ] Make the screen clear when someone wins
+- [ ] Make everything reliant on `viewport.size`
+- [ ] Make the screen look good
